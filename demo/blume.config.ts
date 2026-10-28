@@ -4,6 +4,10 @@ import codeTheme from "./opencode-themes/shiki/opencode.json" with { type: "json
 export default defineConfig({
   title: "opencode themes for Blume",
   description: "Every opencode desktop palette, as a Blume theme.",
+  deployment: {
+    site: "https://mklabs.github.io",
+    base: "/blume-opencode-themes",
+  },
   content: {
     root: "docs",
   },
