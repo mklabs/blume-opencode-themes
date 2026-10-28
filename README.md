@@ -41,7 +41,7 @@ Copy `kit/` to your Blume project root as `opencode-themes/`, next to `blume.con
 cp -r kit <your-site>/opencode-themes
 ```
 
-The commands in this README are plain `cp` and `rm`, so they work unchanged in bash, zsh and PowerShell 7.
+The commands in this README are plain `cp` and `rm`, so they work unchanged in bash, zsh and PowerShell (with [coreutils](https://github.com/microsoft/coreutils)).
 
 ## Step 2: pick your setup
 
