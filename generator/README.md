@@ -24,16 +24,16 @@ cp ../kit/ThemeGallery.tsx ../demo/islands/
 
 ## How it works
 
-- Surfaces, text, border and state colours come from opencode's **V2** resolver.
-- Syntax, markdown and diff colours come from its **V1** resolver, because V2 has
+- Surfaces, text, border and state colors come from opencode's **V2** resolver.
+- Syntax, markdown and diff colors come from its **V1** resolver, because V2 has
   no syntax layer.
 - Both layers emit `var(...)` references, so the generator dereferences them
   across both maps plus the alpha ramps, which only exist in CSS.
 - `muted-foreground` maps to opencode's `text-muted`, but Blume paints **body
   prose** with it, so the generator raises it along the theme's grey ramp until
   it clears 4.5:1. 13 of 36 themes need this.
-- One Shiki theme serves all presets: its colours are `var(--oc-syn-*)`, so
-  switching `data-oc-theme` recolours code at runtime with no rebuild.
+- One Shiki theme serves all presets: its colors are `var(--oc-syn-*)`, so
+  switching `data-oc-theme` recolors code at runtime with no rebuild.
 - Each preset ships twice: attribute-scoped in `kit/themes/` for switching, and
   `:root`-scoped in `kit/standalone/` for pasting a single theme as `theme.css`.
 
@@ -55,7 +55,7 @@ verbatim so its resolvers run exactly as the app runs them. See
 ## Status
 
 Verified in `demo/`: `blume build` and `blume doctor` clean; 36 presets at
-4.51:1 worst-case contrast; switching recolours surfaces, text and syntax; the
+4.51:1 worst-case contrast; switching recolors surfaces, text and syntax; the
 standalone path builds as a single-theme site with no `data-oc-theme` selectors;
 the gallery renders 36 cards with no console errors.
 
