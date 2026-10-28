@@ -1,0 +1,151 @@
+/* Synthwave '84 (synthwave84) - opencode desktop theme, generated from anomalyco/opencode v2.2.0 (1097e2668b), MIT. Do not edit by hand. */
+
+/*
+ * Standalone: this is the only preset in the file, so it goes straight onto
+ * :root and needs no data-oc-theme attribute.
+ *
+ * Install: paste this whole file into your project's theme.css (or copy it
+ * there as theme.css if you do not have one yet), then point
+ * `markdown.code.theme` at `opencode-themes/shiki/opencode.json`.
+ */
+
+:root {
+  --oc-bg: #fafafa;
+  --oc-fg: #110e1f;
+  --oc-muted: #f0f0ef;
+  --oc-muted-fg: #5c5c8a;
+  --oc-border: rgba(0, 0, 0, 0.102);
+  --oc-accent: #09b9d0;
+  --oc-accent-fg: #000000;
+  --oc-code-bg: #f0f0ef;
+  --oc-code-highlight: rgba(9, 185, 208, 0.1);
+  --oc-code-highlight-border: rgba(9, 185, 208, 0.55);
+  --oc-code-add: rgba(54, 112, 55, 0.16);
+  --oc-code-add-border: rgba(54, 112, 55, 0.7);
+  --oc-code-remove: rgba(249, 97, 81, 0.16);
+  --oc-code-remove-border: rgba(249, 97, 81, 0.7);
+  --oc-code-error: rgba(184, 28, 22, 0.16);
+  --oc-code-error-border: rgba(184, 28, 22, 0.7);
+  --oc-code-warning: rgba(158, 97, 28, 0.18);
+  --oc-code-warning-border: rgba(158, 97, 28, 0.7);
+  --oc-code-word: rgba(9, 185, 208, 0.16);
+  --oc-code-word-border: rgba(9, 185, 208, 0.5);
+  --oc-syn-comment: #5c5c8a;
+  --oc-syn-keyword: #e91e63;
+  --oc-syn-string: #ff9800;
+  --oc-syn-constant: #9c27b0;
+  --oc-syn-property: #9c27b0;
+  --oc-syn-variable: #262335;
+  --oc-syn-type: #00bcd4;
+  --oc-syn-operator: #e91e63;
+  --oc-syn-punctuation: #262335;
+  --oc-syn-primitive: #ff5722;
+  --oc-syn-object: #262335;
+  --oc-syn-regexp: #211e30;
+  --oc-syn-success: #067519;
+  --oc-syn-warning: #9f3e0c;
+  --oc-syn-critical: #b21b15;
+  --oc-syn-info: #9e2b01;
+  --oc-syn-diff-add: #367037;
+  --oc-syn-diff-delete: #af2219;
+  --oc-md-text: #262335;
+  --oc-md-heading: #e91e63;
+  --oc-md-link: #00bcd4;
+  --oc-md-link-text: #9c27b0;
+  --oc-md-code: #4caf50;
+  --oc-md-block-quote: #5c5c8a;
+  --oc-md-emphasis: #ff9800;
+  --oc-md-strong: #ff5722;
+  --oc-md-horizontal-rule: #e0e0e0;
+  --oc-md-list-item: #00bcd4;
+  --oc-md-list-enumeration: #9c27b0;
+  --oc-md-image: #00bcd4;
+  --oc-md-image-text: #9c27b0;
+  --oc-md-code-block: #262335;
+}
+
+:root[data-theme="dark"] {
+  --oc-bg: #1e1929;
+  --oc-fg: #ffffff;
+  --oc-muted: #2b2332;
+  --oc-muted-fg: #848bbd;
+  --oc-border: rgba(255, 255, 255, 0.102);
+  --oc-accent: #61f3f0;
+  --oc-accent-fg: #000000;
+  --oc-code-bg: #2b2332;
+  --oc-code-highlight: rgba(97, 243, 240, 0.1);
+  --oc-code-highlight-border: rgba(97, 243, 240, 0.55);
+  --oc-code-add: rgba(156, 253, 227, 0.16);
+  --oc-code-add-border: rgba(156, 253, 227, 0.7);
+  --oc-code-remove: rgba(242, 34, 51, 0.16);
+  --oc-code-remove-border: rgba(242, 34, 51, 0.7);
+  --oc-code-error: rgba(253, 179, 175, 0.16);
+  --oc-code-error-border: rgba(253, 179, 175, 0.7);
+  --oc-code-warning: rgba(232, 199, 62, 0.18);
+  --oc-code-warning-border: rgba(232, 199, 62, 0.7);
+  --oc-code-word: rgba(97, 243, 240, 0.16);
+  --oc-code-word-border: rgba(97, 243, 240, 0.5);
+  --oc-syn-comment: #848bbd;
+  --oc-syn-keyword: #ff7edb;
+  --oc-syn-string: #fede5d;
+  --oc-syn-constant: #b084eb;
+  --oc-syn-property: #b084eb;
+  --oc-syn-variable: #ffffff;
+  --oc-syn-type: #36f9f6;
+  --oc-syn-operator: #ff7edb;
+  --oc-syn-punctuation: #ffffff;
+  --oc-syn-primitive: #ff8b39;
+  --oc-syn-object: #ffffff;
+  --oc-syn-regexp: #ffffff;
+  --oc-syn-success: #74fec1;
+  --oc-syn-warning: #fdcf83;
+  --oc-syn-critical: #fdc3c0;
+  --oc-syn-info: #fcd6bf;
+  --oc-syn-diff-add: #9cfde3;
+  --oc-syn-diff-delete: #fcc4be;
+  --oc-md-text: #ffffff;
+  --oc-md-heading: #ff7edb;
+  --oc-md-link: #36f9f6;
+  --oc-md-link-text: #b084eb;
+  --oc-md-code: #72f1b8;
+  --oc-md-block-quote: #848bbd;
+  --oc-md-emphasis: #fede5d;
+  --oc-md-strong: #ff8b39;
+  --oc-md-horizontal-rule: #495495;
+  --oc-md-list-item: #36f9f6;
+  --oc-md-list-enumeration: #b084eb;
+  --oc-md-image: #36f9f6;
+  --oc-md-image-text: #b084eb;
+  --oc-md-code-block: #ffffff;
+}
+
+/* Connects the preset's `--oc-*` slots to Blume's design tokens.
+   `--oc-*` already carries the mode, so the dark selector only exists to
+   outrank Blume's own `:root[data-theme="dark"]` defaults, which declare at
+   higher specificity than a bare `:root`. */
+
+:root,
+:root[data-theme="dark"] {
+  --blume-background: var(--oc-bg);
+  --blume-foreground: var(--oc-fg);
+  --blume-muted: var(--oc-muted);
+  --blume-muted-foreground: var(--oc-muted-fg);
+  --blume-border: var(--oc-border);
+  --blume-accent: var(--oc-accent);
+  --blume-accent-foreground: var(--oc-accent-fg);
+  --blume-code-background: var(--oc-code-bg);
+  --blume-code-highlight: var(--oc-code-highlight);
+  --blume-code-highlight-border: var(--oc-code-highlight-border);
+  --blume-code-add: var(--oc-code-add);
+  --blume-code-add-border: var(--oc-code-add-border);
+  --blume-code-remove: var(--oc-code-remove);
+  --blume-code-remove-border: var(--oc-code-remove-border);
+  --blume-code-error: var(--oc-code-error);
+  --blume-code-error-border: var(--oc-code-error-border);
+  --blume-code-warning: var(--oc-code-warning);
+  --blume-code-warning-border: var(--oc-code-warning-border);
+  --blume-code-word: var(--oc-code-word);
+  --blume-code-word-border: var(--oc-code-word-border);
+}
+
+

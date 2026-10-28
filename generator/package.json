@@ -1,0 +1,13 @@
+{
+  "name": "opencode-themes-generator",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "esbuild src/generate.ts --bundle --platform=node --format=esm --outfile=dist/generate.mjs",
+    "generate": "npm run build && node dist/generate.mjs",
+    "check": "npm run build && node dist/generate.mjs --check"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.0"
+  }
+}

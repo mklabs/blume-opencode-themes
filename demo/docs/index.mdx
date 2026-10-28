@@ -1,0 +1,85 @@
+---
+title: Theme check
+description: One page that exercises every surface a palette has to handle.
+---
+
+<ThemePicker />
+
+A paragraph of body copy, which Blume paints with `muted-foreground`, the token
+most likely to fail contrast. It carries **bold**, *italic*, `inline code`, and a
+[link to somewhere](https://opencode.ai) so links, emphasis and code can be judged
+together against the page background.
+
+## Headings and hierarchy
+
+### Third level heading
+
+#### Fourth level heading
+
+> A blockquote, which uses the markdown quote color and a muted-foreground body
+> against a left border.
+
+## Callouts
+
+:::note
+A note callout sits on the `muted` surface, the second place contrast tends to
+break down.
+:::
+
+:::warning
+A warning, tinted from the theme's warning ramp.
+:::
+
+:::tip
+A tip.
+:::
+
+## Tables
+
+| Token | Maps to |
+| --- | --- |
+| `background` | `v2-background-bg-base` |
+| `muted` | `v2-background-bg-layer-01` |
+| `accent` | `v2-text-text-accent` |
+| `muted-foreground` | `v2-text-text-muted`, raised to AA |
+
+## Lists
+
+- A bullet with `inline code`
+- A second bullet with a [link](https://opencode.ai/docs)
+  - Nested one level
+
+1. First ordered item
+2. Second ordered item
+
+## Code
+
+```ts server.ts
+// A comment, so the comment color shows
+import { createServer } from "node:http"
+
+const port: number = 3000
+const label = "a string literal"
+
+export function greet(name: string) {
+  return `hello ${name}`
+}
+
+createServer().listen(port)
+```
+
+Fenced blocks support notation highlights:
+
+```ts
+const a = 1 // [!code highlight]
+const b = 2 // [!code ++]
+const c = 3 // [!code --]
+const d = 4 // [!code warning]
+```
+
+```json
+{
+  "theme": { "name": "oc-2", "mode": "system" },
+  "tui": true
+}
+```

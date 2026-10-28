@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+*.tsbuildinfo
+
+# Blume's generated Astro project (also created by `blume build --isolated`)
+.blume/
+.blume-verify/
+
+# Caches and logs
+.cache/
+.vite/
+*.log
+npm-debug.log*
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor state
+.vscode/
+.idea/

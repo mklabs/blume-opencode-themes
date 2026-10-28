@@ -1,0 +1,834 @@
+{
+  "source": "anomalyco/opencode v2.2.0 (1097e2668b), MIT",
+  "generator": "opencode-themes-generator",
+  "policy": {
+    "defaultTheme": "oc-2",
+    "accent": "interactive",
+    "muted": "layer-01"
+  },
+  "themes": [
+    {
+      "id": "amoled",
+      "name": "AMOLED",
+      "light": {
+        "background": "#f1f1f1",
+        "foreground": "#010101",
+        "accent": "#610efc"
+      },
+      "dark": {
+        "background": "#000000",
+        "foreground": "#ffffff",
+        "accent": "#ded1fe"
+      },
+      "contrast": {
+        "worst": 7.05,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "aura",
+      "name": "Aura",
+      "light": {
+        "background": "#f6f3fe",
+        "foreground": "#170e28",
+        "accent": "#a278fd"
+      },
+      "dark": {
+        "background": "#121117",
+        "foreground": "#fdfdfd",
+        "accent": "#dbd2fc"
+      },
+      "contrast": {
+        "worst": 6.64,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "ayu",
+      "name": "Ayu",
+      "light": {
+        "background": "#fdfbf5",
+        "foreground": "#2b3540",
+        "accent": "#26aad1"
+      },
+      "dark": {
+        "background": "#0b1015",
+        "foreground": "#fbfbfc",
+        "accent": "#a9e3fc"
+      },
+      "contrast": {
+        "worst": 5.36,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "carbonfox",
+      "name": "Carbonfox",
+      "light": {
+        "background": "#eeeeee",
+        "foreground": "#070707",
+        "accent": "#1363fb"
+      },
+      "dark": {
+        "background": "#292929",
+        "foreground": "#fefefe",
+        "accent": "#c6dafc"
+      },
+      "contrast": {
+        "worst": 4.99,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "catppuccin-frappe",
+      "name": "Catppuccin Frappe",
+      "light": {
+        "background": "#f1f3f6",
+        "foreground": "#2a2c46",
+        "accent": "#7387fb"
+      },
+      "dark": {
+        "background": "#212435",
+        "foreground": "#fafbfe",
+        "accent": "#c9d9fd"
+      },
+      "contrast": {
+        "worst": 5.5,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "catppuccin-macchiato",
+      "name": "Catppuccin Macchiato",
+      "light": {
+        "background": "#f1f3f6",
+        "foreground": "#2a2c46",
+        "accent": "#7387fb"
+      },
+      "dark": {
+        "background": "#191b2d",
+        "foreground": "#fafbfe",
+        "accent": "#c8dafb"
+      },
+      "contrast": {
+        "worst": 5.5,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "catppuccin",
+      "name": "Catppuccin",
+      "light": {
+        "background": "#f1f3f6",
+        "foreground": "#2a2c46",
+        "accent": "#7387fb"
+      },
+      "dark": {
+        "background": "#151524",
+        "foreground": "#fafbfe",
+        "accent": "#d0d7fc"
+      },
+      "contrast": {
+        "worst": 5.5,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "cobalt2",
+      "name": "Cobalt2",
+      "light": {
+        "background": "#ffffff",
+        "foreground": "#021c2d",
+        "accent": "#0766ca"
+      },
+      "dark": {
+        "background": "#092738",
+        "foreground": "#ffffff",
+        "accent": "#c1dcfd"
+      },
+      "contrast": {
+        "worst": 5,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "light": {
+        "background": "#fcfcfc",
+        "foreground": "#050505",
+        "accent": "#13659a"
+      },
+      "dark": {
+        "background": "#141414",
+        "foreground": "#fcfcfc",
+        "accent": "#a4e8e4"
+      },
+      "contrast": {
+        "worst": 5.22,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#616161",
+          "to": "#909090",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "dracula",
+      "name": "Dracula",
+      "light": {
+        "background": "#f9f9f4",
+        "foreground": "#0c0b1a",
+        "accent": "#7c67ff"
+      },
+      "dark": {
+        "background": "#151720",
+        "foreground": "#fefefe",
+        "accent": "#e0d0fc"
+      },
+      "contrast": {
+        "worst": 5.24,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "everforest",
+      "name": "Everforest",
+      "light": {
+        "background": "#fdf8e8",
+        "foreground": "#334048",
+        "accent": "#8da10f"
+      },
+      "dark": {
+        "background": "#1c252b",
+        "foreground": "#fbfaf7",
+        "accent": "#cce3ab"
+      },
+      "contrast": {
+        "worst": 4.63,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#a6b0a0",
+          "to": "#606f76",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#7a8478",
+          "to": "#abad92",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "flexoki",
+      "name": "Flexoki",
+      "light": {
+        "background": "#fffcf3",
+        "foreground": "#040303",
+        "accent": "#165dac"
+      },
+      "dark": {
+        "background": "#0f0e0e",
+        "foreground": "#fbfaf9",
+        "accent": "#bcddfd"
+      },
+      "contrast": {
+        "worst": 5.53,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#6f6e69",
+          "to": "#645f5d",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#6f6e69",
+          "to": "#aca9a1",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "light": {
+        "background": "#ffffff",
+        "foreground": "#0e1319",
+        "accent": "#0f69d8"
+      },
+      "dark": {
+        "background": "#0a0e14",
+        "foreground": "#fafbfc",
+        "accent": "#c0dcfe"
+      },
+      "contrast": {
+        "worst": 5.21,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "gruvbox",
+      "name": "Gruvbox",
+      "light": {
+        "background": "#fcf5d7",
+        "foreground": "#211d1b",
+        "accent": "#12697a"
+      },
+      "dark": {
+        "background": "#1f1e1d",
+        "foreground": "#fdfbf7",
+        "accent": "#c3e1d5"
+      },
+      "contrast": {
+        "worst": 6.31,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "kanagawa",
+      "name": "Kanagawa",
+      "light": {
+        "background": "#f4ede3",
+        "foreground": "#34231a",
+        "accent": "#326384"
+      },
+      "dark": {
+        "background": "#17161e",
+        "foreground": "#fcfbf8",
+        "accent": "#c7dafe"
+      },
+      "contrast": {
+        "worst": 4.62,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#8a8980",
+          "to": "#706056",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#727169",
+          "to": "#9b837c",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "lucent-orng",
+      "name": "Lucent Orng",
+      "light": {
+        "background": "#fef7f3",
+        "foreground": "#090909",
+        "accent": "#f35317"
+      },
+      "dark": {
+        "background": "#21130e",
+        "foreground": "#fdfdfd",
+        "accent": "#fccdbf"
+      },
+      "contrast": {
+        "worst": 4.82,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#8a8a8a",
+          "to": "#696765",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#808080",
+          "to": "#9b9691",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "material",
+      "name": "Material",
+      "light": {
+        "background": "#fafafa",
+        "foreground": "#0d191f",
+        "accent": "#24aeb7"
+      },
+      "dark": {
+        "background": "#1a252a",
+        "foreground": "#fdffff",
+        "accent": "#a5e4fe"
+      },
+      "contrast": {
+        "worst": 5.5,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#90a4ae",
+          "to": "#485456",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#546e7a",
+          "to": "#98a8ab",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "matrix",
+      "name": "Matrix",
+      "light": {
+        "background": "#f0f5ed",
+        "foreground": "#353535",
+        "accent": "#25c14d"
+      },
+      "dark": {
+        "background": "#070e07",
+        "foreground": "#ececec",
+        "accent": "#79f89d"
+      },
+      "contrast": {
+        "worst": 6.69,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#748476",
+          "to": "#435143",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury",
+      "light": {
+        "background": "#ffffff",
+        "foreground": "#1b1b29",
+        "accent": "#3f4cf3"
+      },
+      "dark": {
+        "background": "#11111b",
+        "foreground": "#fcfcfc",
+        "accent": "#cbd8ff"
+      },
+      "contrast": {
+        "worst": 4.51,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "monokai",
+      "name": "Monokai",
+      "light": {
+        "background": "#fdf9ef",
+        "foreground": "#140e04",
+        "accent": "#be7cfd"
+      },
+      "dark": {
+        "background": "#1d1e19",
+        "foreground": "#fefefe",
+        "accent": "#ddd1fd"
+      },
+      "contrast": {
+        "worst": 7.49,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "nightowl",
+      "name": "Night Owl",
+      "light": {
+        "background": "#f1f1f1",
+        "foreground": "#232234",
+        "accent": "#336ff4"
+      },
+      "dark": {
+        "background": "#04101c",
+        "foreground": "#fbfcfd",
+        "accent": "#c7dafe"
+      },
+      "contrast": {
+        "worst": 4.72,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "nord",
+      "name": "Nord",
+      "light": {
+        "background": "#eef1f5",
+        "foreground": "#141a26",
+        "accent": "#5181bb"
+      },
+      "dark": {
+        "background": "#1f2530",
+        "foreground": "#fcfdfe",
+        "accent": "#b2e2f1"
+      },
+      "contrast": {
+        "worst": 5.21,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "oc-2",
+      "name": "OpenCode",
+      "light": {
+        "background": "#ffffff",
+        "foreground": "#161616",
+        "accent": "#3b5cf6"
+      },
+      "dark": {
+        "background": "#161616",
+        "foreground": "#fafafa",
+        "accent": "#a2bcff"
+      },
+      "contrast": {
+        "worst": 5.19,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "one-dark",
+      "name": "One Dark",
+      "light": {
+        "background": "#fafafa",
+        "foreground": "#1d1f27",
+        "accent": "#3976fc"
+      },
+      "dark": {
+        "background": "#1b1e25",
+        "foreground": "#f8f9fa",
+        "accent": "#bcdefc"
+      },
+      "contrast": {
+        "worst": 5.17,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#a0a1a7",
+          "to": "#5d5960",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#5c6370",
+          "to": "#9198a4",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "onedarkpro",
+      "name": "One Dark Pro",
+      "light": {
+        "background": "#f6f7f9",
+        "foreground": "#131722",
+        "accent": "#538bfd"
+      },
+      "dark": {
+        "background": "#14181f",
+        "foreground": "#f8f9fa",
+        "accent": "#bcdefc"
+      },
+      "contrast": {
+        "worst": 6.09,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "orng",
+      "name": "Orng",
+      "light": {
+        "background": "#ffffff",
+        "foreground": "#090909",
+        "accent": "#f35317"
+      },
+      "dark": {
+        "background": "#0b0b0b",
+        "foreground": "#fdfdfd",
+        "accent": "#fccdbf"
+      },
+      "contrast": {
+        "worst": 4.62,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#8a8a8a",
+          "to": "#6a6a6a",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "osaka-jade",
+      "name": "Osaka Jade",
+      "light": {
+        "background": "#f8f7e4",
+        "foreground": "#020b07",
+        "accent": "#26aa90"
+      },
+      "dark": {
+        "background": "#0a1611",
+        "foreground": "#fafaf5",
+        "accent": "#abe7e0"
+      },
+      "contrast": {
+        "worst": 5.07,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#53685b",
+          "to": "#9ca680",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "palenight",
+      "name": "Palenight",
+      "light": {
+        "background": "#fafafa",
+        "foreground": "#121526",
+        "accent": "#4474f4"
+      },
+      "dark": {
+        "background": "#1b1e2f",
+        "foreground": "#f8f8fc",
+        "accent": "#c7dafe"
+      },
+      "contrast": {
+        "worst": 5,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#8796b0",
+          "to": "#544d5b",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#676e95",
+          "to": "#8d93b1",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "rosepine",
+      "name": "Rose Pine",
+      "light": {
+        "background": "#fbf5ef",
+        "foreground": "#332d53",
+        "accent": "#177596"
+      },
+      "dark": {
+        "background": "#12101d",
+        "foreground": "#fcfcfe",
+        "accent": "#b6e2ea"
+      },
+      "contrast": {
+        "worst": 5.15,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#9893a5",
+          "to": "#5f567c",
+          "reason": "raised to AA for body text"
+        },
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#6e6a86",
+          "to": "#8d8b9e",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "shadesofpurple",
+      "name": "Shades of Purple",
+      "light": {
+        "background": "#f8effe",
+        "foreground": "#210f3d",
+        "accent": "#7a5bf6"
+      },
+      "dark": {
+        "background": "#150b24",
+        "foreground": "#fefeff",
+        "accent": "#e3cffd"
+      },
+      "contrast": {
+        "worst": 4.65,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "solarized",
+      "name": "Solarized",
+      "light": {
+        "background": "#fdf8e8",
+        "foreground": "#2e444b",
+        "accent": "#0c8bd9"
+      },
+      "dark": {
+        "background": "#041d24",
+        "foreground": "#f6f8f8",
+        "accent": "#d1d6fc"
+      },
+      "contrast": {
+        "worst": 4.64,
+        "failures": []
+      },
+      "adjusted": [
+        {
+          "slot": "--oc-muted-fg",
+          "from": "#61767d",
+          "to": "#5b7077",
+          "reason": "raised to AA for body text"
+        }
+      ]
+    },
+    {
+      "id": "synthwave84",
+      "name": "Synthwave '84",
+      "light": {
+        "background": "#fafafa",
+        "foreground": "#110e1f",
+        "accent": "#09b9d0"
+      },
+      "dark": {
+        "background": "#1e1929",
+        "foreground": "#ffffff",
+        "accent": "#61f3f0"
+      },
+      "contrast": {
+        "worst": 4.61,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "tokyonight",
+      "name": "Tokyonight",
+      "light": {
+        "background": "#e5e6ea",
+        "foreground": "#0f1638",
+        "accent": "#217bf2"
+      },
+      "dark": {
+        "background": "#13141e",
+        "foreground": "#f9faff",
+        "accent": "#c7dafe"
+      },
+      "contrast": {
+        "worst": 5.18,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "vercel",
+      "name": "Vercel",
+      "light": {
+        "background": "#ffffff",
+        "foreground": "#070707",
+        "accent": "#0871f1"
+      },
+      "dark": {
+        "background": "#000000",
+        "foreground": "#fdfdfd",
+        "accent": "#beddfe"
+      },
+      "contrast": {
+        "worst": 4.64,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "vesper",
+      "name": "Vesper",
+      "light": {
+        "background": "#f1f1f1",
+        "foreground": "#040404",
+        "accent": "#da9253"
+      },
+      "dark": {
+        "background": "#0f0f0f",
+        "foreground": "#ffffff",
+        "accent": "#ffcea7"
+      },
+      "contrast": {
+        "worst": 8.22,
+        "failures": []
+      },
+      "adjusted": []
+    },
+    {
+      "id": "zenburn",
+      "name": "Zenburn",
+      "light": {
+        "background": "#fffff4",
+        "foreground": "#222222",
+        "accent": "#548196"
+      },
+      "dark": {
+        "background": "#2c2c2b",
+        "foreground": "#fcfcfa",
+        "accent": "#ace6e8"
+      },
+      "contrast": {
+        "worst": 4.62,
+        "failures": []
+      },
+      "adjusted": []
+    }
+  ]
+}

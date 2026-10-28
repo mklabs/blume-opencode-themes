@@ -1,0 +1,434 @@
+{
+  "name": "opencode",
+  "type": "dark",
+  "colors": {
+    "editor.background": "transparent",
+    "editor.foreground": "var(--oc-fg)"
+  },
+  "tokenColors": [
+    {
+      "scope": [
+        "default"
+      ],
+      "settings": {
+        "foreground": "var(--oc-fg)"
+      }
+    },
+    {
+      "scope": [
+        "comment",
+        "comment.documentation"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-comment)",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "string",
+        "symbol",
+        "character.special",
+        "character"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-string)"
+      }
+    },
+    {
+      "scope": [
+        "number",
+        "boolean",
+        "constant",
+        "float"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-constant)"
+      }
+    },
+    {
+      "scope": [
+        "keyword.return",
+        "keyword.conditional",
+        "keyword.repeat",
+        "keyword.coroutine"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-keyword)",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "keyword.type"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-type)",
+        "fontStyle": "bold italic"
+      }
+    },
+    {
+      "scope": [
+        "keyword.function",
+        "function.method"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-property)"
+      }
+    },
+    {
+      "scope": [
+        "keyword"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-keyword)",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "keyword.import",
+        "string.escape",
+        "string.regexp",
+        "tag.attribute",
+        "keyword.export"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-keyword)"
+      }
+    },
+    {
+      "scope": [
+        "operator",
+        "keyword.operator",
+        "punctuation.delimiter",
+        "keyword.conditional.ternary"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-operator)"
+      }
+    },
+    {
+      "scope": [
+        "variable",
+        "variable.parameter",
+        "function.method.call",
+        "function.call",
+        "property",
+        "parameter",
+        "field"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-variable)"
+      }
+    },
+    {
+      "scope": [
+        "variable.member",
+        "function",
+        "constructor"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-property)"
+      }
+    },
+    {
+      "scope": [
+        "type",
+        "module",
+        "class",
+        "namespace"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-type)"
+      }
+    },
+    {
+      "scope": [
+        "type.definition"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-type)",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "punctuation",
+        "punctuation.bracket"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-punctuation)"
+      }
+    },
+    {
+      "scope": [
+        "variable.builtin",
+        "type.builtin",
+        "function.builtin",
+        "module.builtin",
+        "constant.builtin",
+        "variable.super"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-critical)"
+      }
+    },
+    {
+      "scope": [
+        "keyword.directive",
+        "keyword.modifier",
+        "keyword.exception"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-keyword)",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "punctuation.special",
+        "tag.delimiter"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-operator)"
+      }
+    },
+    {
+      "scope": [
+        "markup.heading",
+        "markup.heading.2",
+        "markup.heading.3",
+        "markup.heading.4",
+        "markup.heading.5",
+        "markup.heading.6"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-heading)",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "markup.heading.1"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-heading)",
+        "fontStyle": "bold underline"
+      }
+    },
+    {
+      "scope": [
+        "markup.bold",
+        "markup.strong"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-strong)",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "markup.italic"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-emphasis)",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "markup.list"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-list-item)"
+      }
+    },
+    {
+      "scope": [
+        "markup.quote"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-block-quote)",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "scope": [
+        "markup.raw",
+        "markup.raw.block"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-code)"
+      }
+    },
+    {
+      "scope": [
+        "markup.raw.inline"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-code)"
+      }
+    },
+    {
+      "scope": [
+        "markup.link",
+        "markup.link.url",
+        "string.special",
+        "string.special.url"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-link)",
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "scope": [
+        "markup.link.label"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-link-text)",
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "scope": [
+        "label"
+      ],
+      "settings": {
+        "foreground": "var(--oc-md-link-text)"
+      }
+    },
+    {
+      "scope": [
+        "spell",
+        "nospell"
+      ],
+      "settings": {
+        "foreground": "var(--oc-fg)"
+      }
+    },
+    {
+      "scope": [
+        "markup.underline"
+      ],
+      "settings": {
+        "foreground": "var(--oc-fg)",
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "scope": [
+        "comment.error"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-critical)",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "scope": [
+        "comment.warning"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-warning)",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "scope": [
+        "comment.todo",
+        "comment.note"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-info)",
+        "fontStyle": "italic bold"
+      }
+    },
+    {
+      "scope": [
+        "attribute",
+        "annotation"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-warning)"
+      }
+    },
+    {
+      "scope": [
+        "tag"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-critical)"
+      }
+    },
+    {
+      "scope": [
+        "markup.strikethrough",
+        "markup.list.unchecked",
+        "debug"
+      ],
+      "settings": {
+        "foreground": "var(--oc-muted-fg)"
+      }
+    },
+    {
+      "scope": [
+        "markup.list.checked"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-success)"
+      }
+    },
+    {
+      "scope": [
+        "diff.plus"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-diff-add)"
+      }
+    },
+    {
+      "scope": [
+        "diff.minus"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-diff-delete)"
+      }
+    },
+    {
+      "scope": [
+        "diff.delta"
+      ],
+      "settings": {
+        "foreground": "var(--oc-muted-fg)"
+      }
+    },
+    {
+      "scope": [
+        "error"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-critical)",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "warning"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-warning)",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "scope": [
+        "info"
+      ],
+      "settings": {
+        "foreground": "var(--oc-syn-info)"
+      }
+    }
+  ]
+}
