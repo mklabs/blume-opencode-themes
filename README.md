@@ -8,6 +8,31 @@ The gallery demo runs at <https://mklabs.github.io/blume-opencode-themes/>.
 
 You can use the kit two ways: **one fixed theme** (most docs sites), or **all 36 with a switcher** (demos and showcases). Both start the same way.
 
+## Presets
+
+All 36, each with light and dark variants. `oc-2` (OpenCode) is the default; IDs match the filenames in `standalone/` and `themes/`.
+
+| Preset | ID | Preset | ID |
+| --- | --- | --- | --- |
+| OpenCode | [`oc-2`](kit/standalone/oc-2.css) | AMOLED | [`amoled`](kit/standalone/amoled.css) |
+| Aura | [`aura`](kit/standalone/aura.css) | Ayu | [`ayu`](kit/standalone/ayu.css) |
+| Carbonfox | [`carbonfox`](kit/standalone/carbonfox.css) | Catppuccin | [`catppuccin`](kit/standalone/catppuccin.css) |
+| Catppuccin Frappe | [`catppuccin-frappe`](kit/standalone/catppuccin-frappe.css) | Catppuccin Macchiato | [`catppuccin-macchiato`](kit/standalone/catppuccin-macchiato.css) |
+| Cobalt2 | [`cobalt2`](kit/standalone/cobalt2.css) | Cursor | [`cursor`](kit/standalone/cursor.css) |
+| Dracula | [`dracula`](kit/standalone/dracula.css) | Everforest | [`everforest`](kit/standalone/everforest.css) |
+| Flexoki | [`flexoki`](kit/standalone/flexoki.css) | GitHub | [`github`](kit/standalone/github.css) |
+| Gruvbox | [`gruvbox`](kit/standalone/gruvbox.css) | Kanagawa | [`kanagawa`](kit/standalone/kanagawa.css) |
+| Lucent Orng | [`lucent-orng`](kit/standalone/lucent-orng.css) | Material | [`material`](kit/standalone/material.css) |
+| Matrix | [`matrix`](kit/standalone/matrix.css) | Mercury | [`mercury`](kit/standalone/mercury.css) |
+| Monokai | [`monokai`](kit/standalone/monokai.css) | Night Owl | [`nightowl`](kit/standalone/nightowl.css) |
+| Nord | [`nord`](kit/standalone/nord.css) | One Dark | [`one-dark`](kit/standalone/one-dark.css) |
+| One Dark Pro | [`onedarkpro`](kit/standalone/onedarkpro.css) | Orng | [`orng`](kit/standalone/orng.css) |
+| Osaka Jade | [`osaka-jade`](kit/standalone/osaka-jade.css) | Palenight | [`palenight`](kit/standalone/palenight.css) |
+| Rose Pine | [`rosepine`](kit/standalone/rosepine.css) | Shades of Purple | [`shadesofpurple`](kit/standalone/shadesofpurple.css) |
+| Solarized | [`solarized`](kit/standalone/solarized.css) | Synthwave '84 | [`synthwave84`](kit/standalone/synthwave84.css) |
+| Tokyonight | [`tokyonight`](kit/standalone/tokyonight.css) | Vercel | [`vercel`](kit/standalone/vercel.css) |
+| Vesper | [`vesper`](kit/standalone/vesper.css) | Zenburn | [`zenburn`](kit/standalone/zenburn.css) |
+
 ## Step 1: copy the folder
 
 Copy `kit/` to your Blume project root as `opencode-themes/`, next to `blume.config.ts` and `theme.css`:
@@ -30,7 +55,7 @@ cp opencode-themes/standalone/flexoki.css <your-site>/theme.css
 
 If you already have a `theme.css`, paste the contents of `opencode-themes/standalone/<id>.css` at the **end** of it instead: later rules win, so the preset takes over.
 
-Pick `<id>` from the filenames in `opencode-themes/standalone/` (or the `themes` array in `manifest.json`). Ids are the opencode desktop ids: `oc-2` (opencode's own theme), `flexoki`, `gruvbox`, `tokyonight`, `catppuccin`, `rosepine`, `solarized`, `matrix`, `nord`, `dracula`, `github`, `monokai`, `vesper`, `kanagawa`, `everforest`, `material`, `zenburn`, and 20 more.
+Pick `<id>` from the table above, the filenames in `opencode-themes/standalone/`, or the `themes` array in `manifest.json`.
 
 ### B. All 36, switchable at runtime
 
