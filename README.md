@@ -1,63 +1,180 @@
 # blume-opencode-themes
 
-Experiment: derive Blume themes from opencode's desktop colour themes.
+Derive Blume themes from opencode's desktop colour themes.
+
+36 presets, generated from `anomalyco/opencode` v2.2.0 (MIT) by running opencode's
+own theme resolvers. The colours are the app's, not an approximation.
+
+The kit is the deliverable: copy `kit/` into any Blume site. `generator/` rebuilds
+it and is not needed by a consuming site; its notes are in
+[generator/README.md](generator/README.md).
 
 ```
-generator/   runs opencode's own resolvers -> emits kit/
-  vendor/      opencode theme engine + 36 theme JSONs, copied from v2.2.0
-  src/policy.ts   the only file to edit when a theme looks wrong
-  starter/     hand-maintained kit files, copied into kit/ on every run
-kit/         THE deliverable, copy this folder into any Blume site
-demo/        throwaway Blume site used to check the result
+kit/         the copy-paste deliverable
+generator/   rebuilds kit/ from opencode's resolvers
+demo/        two-page Blume site that verifies the kit, deployed to GitHub Pages
 ```
 
-## Regenerate
+The demo runs at <https://mklabs.github.io/blume-opencode-themes/>.
+
+You can use the kit two ways: **one fixed theme** (most docs sites), or **all 36
+with a switcher** (demos and showcases). Both start the same way.
+
+---
+
+## Step 1: copy the folder
+
+Copy `kit/` to your Blume project root as `opencode-themes/`, next to
+`blume.config.ts` and `theme.css`:
 
 ```bash
-cd generator
-npm run generate        # writes ../kit
-npm run check           # validate only; exits 1 if a preset misses WCAG AA
+cp -r kit <your-site>/opencode-themes
 ```
 
-Then re-copy into the demo:
+The commands in this README are plain `cp` and `rm`, so they work unchanged in
+bash, zsh and PowerShell 7.
+
+## Step 2: pick your setup
+
+### A. One fixed theme (recommended for a real docs site)
+
+Every preset also exists **standalone**, already scoped to `:root`, so it needs
+no attribute and no JavaScript:
 
 ```bash
-rm -r ../demo/opencode-themes
-cp -r ../kit ../demo/opencode-themes
-cp ../kit/theme.css ../demo/theme.css
-cp ../kit/ThemePicker.tsx ../demo/islands/
-cp ../kit/ThemeGallery.tsx ../demo/islands/
+cp opencode-themes/standalone/flexoki.css <your-site>/theme.css
 ```
 
-## How it works
+If you already have a `theme.css`, paste the contents of
+`opencode-themes/standalone/<id>.css` at the **end** of it instead: later rules
+win, so the preset takes over.
 
-- Surfaces, text, border and state colours come from opencode's **V2** resolver.
-- Syntax, markdown and diff colours come from its **V1** resolver (V2 has no
-  syntax layer).
-- Both layers emit `var(--...)` references, so the generator dereferences them
-  across both maps plus the alpha ramps (which only exist in CSS).
-- `muted-foreground` maps to opencode's `text-muted`, but Blume paints **body
-  prose** with it, so the generator raises it along the theme's grey ramp until
-  it clears 4.5:1. 13 of 36 themes need this.
-- One Shiki theme serves all presets: its colours are `var(--oc-syn-*)`, so
-  switching `data-oc-theme` recolours code at runtime with no rebuild.
-- Each preset ships twice: attribute-scoped (`themes/`, for switching) and
-  `:root`-scoped (`standalone/`, for pasting a single theme as `theme.css`).
+Pick `<id>` from the filenames in `opencode-themes/standalone/` (or the `themes`
+array in `manifest.json`). Ids are the opencode desktop ids: `oc-2` (opencode's
+own theme), `flexoki`, `gruvbox`, `tokyonight`, `catppuccin`, `rosepine`,
+`solarized`, `matrix`, `nord`, `dracula`, `github`, `monokai`, `vesper`,
+`kanagawa`, `everforest`, `material`, `zenburn`, and 20 more.
 
-## Status
+### B. All 36, switchable at runtime
 
-Verified in `demo/`:
+Paste **everything between the markers** in `opencode-themes/theme.css` into
+your site's `theme.css` (at the end if you already have one):
 
-- `blume build` and `blume doctor` clean.
-- 36 presets, all at least 4.51:1 worst-case contrast.
-- Switching `data-oc-theme` re-themes surfaces, text and syntax highlighting
-  (oc-2 `rgb(247,153,198)` -> flexoki `rgb(135,154,57)` -> matrix
-  `rgb(199,112,255)` for the same keyword span).
-- The standalone path builds as a single-theme site with zero
-  `data-oc-theme` selectors.
-- `/themes` gallery renders 36 cards, each a real themed subtree, with no
-  console errors.
+```
+/* >>> opencode-themes:start */
+...
+/* <<< opencode-themes:end */
+```
 
-Not done: the demo has two pages only; the generator is not packaged as a
-reusable command; the gallery's "use" button was exercised while the desktop
-window was visible, not after.
+Blume inlines `theme.css` into a generated sheet under `.blume/`, so a relative
+`@import` cannot reach the project root, which is why the block has to live
+inside the file. The markers make a later regeneration a splice instead of a
+manual merge.
+
+Then copy the picker island (React) next to your content:
+
+```bash
+cp opencode-themes/ThemePicker.tsx <your-site>/islands/
+```
+
+and use it on any page:
+
+```mdx
+<ThemePicker />
+```
+
+It writes `data-oc-theme` on `<html>` and remembers the choice in
+`localStorage`. Without it, or on a first visit, the site uses the default
+preset (`oc-2`). To change that default permanently, set `policy.defaultTheme`
+in the generator and regenerate, or just use setup A.
+
+You can also set it statically on the root element if you override the layout:
+`<html lang="en" data-oc-theme="flexoki">`.
+
+### C. Optional: the gallery
+
+All 36 side by side, each card a real themed surface:
+
+```bash
+cp opencode-themes/ThemeGallery.tsx <your-site>/islands/
+```
+
+```mdx
+<ThemeGallery />
+```
+
+Cards carry their own `data-oc-theme` and `data-theme`, so they do not depend on
+the page's theme. A light/dark toggle covers both modes, and **use** applies that
+preset to the whole site. Presets are attribute-scoped (not `:root`-scoped) for
+exactly this reason.
+
+---
+
+## Step 3: code highlighting (required)
+
+The palette is also applied to fenced code. Point Blume's Shiki config at the
+kit's theme in `blume.config.ts`:
+
+```ts
+import codeTheme from "./opencode-themes/shiki/opencode.json" with { type: "json" };
+
+export default defineConfig({
+  markdown: {
+    code: {
+      theme: { light: codeTheme, dark: codeTheme },
+    },
+  },
+});
+```
+
+The same file serves every preset: its colours are `var(--oc-syn-*)` references
+rather than baked hex, so switching presets recolours code too. Nothing is
+hardcoded to one theme and no rebuild is needed.
+
+That is the whole install. Run `blume doctor` and `blume build` to confirm.
+
+---
+
+## Notes
+
+- **Contrast is enforced.** Blume paints body copy with `muted-foreground`, a
+  much more demanding role than opencode's de-emphasised `text-muted`. The
+  generator raises that one colour along the theme's own grey ramp until it
+  clears WCAG AA (4.5:1) against both the page and the `muted` surface. 13 of
+  the 36 need it; `manifest.json` records each adjustment under `adjusted`.
+- **Fonts and radius are yours.** opencode is a terminal: it has no corner
+  radius or type scale. Blume's defaults (Inter + IBM Plex Mono) already match
+  opencode's desktop fonts, so usually there is nothing to do. Override with
+  `theme.fonts` / `theme.radius` for a different character.
+- **`accent` is the interactive blue.** opencode has two accent-ish colours;
+  this kit uses `interactive` (oc-2: `#034cff` light, `#a2bcff` dark), the one
+  the app uses for interactive UI. Blume paints prose *links* with `foreground`,
+  so `accent` shows up in focus rings, step markers, badges and active tabs.
+- **Dark mode composes.** Every preset declares both modes; the mode comes from
+  Blume's `data-theme`, so `mode: "system"`, the header toggle and print styles
+  behave normally.
+- **The islands are React.** Blume also supports Vue and Svelte islands; only
+  `ThemePicker.tsx` and `ThemeGallery.tsx` would need porting. The CSS is
+  framework-agnostic.
+- **Islands hydrate when visible.** Both use `client: "visible"`, so a gallery
+  far down a page activates on scroll.
+
+## What's inside
+
+| Path | Purpose |
+| --- | --- |
+| `standalone/<id>.css` | One preset, ready to paste as `theme.css` |
+| `theme.css` | All presets + token aliases, marker-delimited |
+| `themes/<id>.css` | One preset as an attribute-scoped block |
+| `shiki/opencode.json` | One Shiki theme for all presets |
+| `manifest.json` | Ids, display names, sample colours, contrast report |
+| `ThemePicker.tsx` | Optional island: a dropdown |
+| `ThemeGallery.tsx` | Optional island: all 36 side by side |
+
+About 190 KB of CSS for all 36 presets. Ship fewer by regenerating with
+`policy.include` set, or by taking one `standalone/` file.
+
+## Licence
+
+Theme colours derived from opencode (MIT, (c) 2025 opencode). The rest is yours
+to use however you like.
